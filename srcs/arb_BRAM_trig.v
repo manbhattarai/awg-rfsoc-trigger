@@ -1,4 +1,4 @@
-module awg_BRAM_parity
+module awg_BRAM
     #(parameter GPIO_DATA_WIDTH = 16,
     parameter RAM_DATA_WIDTH = 128,
     parameter DAC_DATA_WIDTH = 256,
@@ -59,7 +59,7 @@ module awg_BRAM_parity
     end
     
     wire clk_enable;
-    assign clk_enable  = we[0] | we[1];
+    assign clk_enable  = ~(we[0] | we[1]);
     
     always@(posedge m00_axis_aclk)
     begin
