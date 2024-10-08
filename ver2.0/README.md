@@ -1,5 +1,5 @@
 # awg-rfsoc-trigger
-Same as the awg-rfsoc package with an additional control signal realized with a processor controlled GPIO.
+Same as the awg-rfsoc package with an additional <b>control signal realized with a processor controlled GPIO</b>.
 The AWG has a memory of $2^{20}$ points. 
 The memory can be loaded with 2 different waveforms, where the first $2^{19}$ points form one waveform and the second $2^{19}$ points form the second wavefom.
 The 1-bit control signal can be used to switch between the two waveforms. The AWG outputs the first waveform when the control signal is low and outputs the second waveform when the control signal is high.
